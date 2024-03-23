@@ -1,12 +1,12 @@
 {
 	"user":{
-		"username":"MAIL",
+		"username":"Meliodas",
 		"pass":"MDP"
 	},
 
 	"server":{
-		"address":"histeria.fr",
-		"port":"25565"
+		"address":"_X_SMP.aternos.me",
+		"port":"28708"
 	},
 
 	"toggle":{
