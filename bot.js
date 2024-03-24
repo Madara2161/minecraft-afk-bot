@@ -155,29 +155,6 @@ function autofunc()
 	}
 }
 
-let quitting = false;
-
-bot.on('login', () => {
-    console.log("| Connected");
-
-    if (quitting) {
-        setTimeout(() => {
-            quitting = false;
-        }, 5000); // Delay for 5 seconds before quitting
-    }
-});
-
-bot.on('end', () => {
-    if (!quitting) {
-        process.exit(60); // Exit with delay only if not already quitting
-    }
-});
-
-bot.on('error', function (err) {
-    console.log('Error: ' + err.errno);
-    if (err.code === undefined) {
-        console.log('Incorrect credentials, server inaccessible, or another undefined error');
-    }
     console.log('Reconnecting in 60 seconds, Ctrl+C to cancel');
     quitting = true; // Set quitting flag when encountering an error
     process.exit(60);
